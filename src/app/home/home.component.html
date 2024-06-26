@@ -20,6 +20,13 @@
         <h2>projets récents</h2>
         <h4>{{projetActuel.nom}}</h4>
       </div>
+      <carousel> 
+        <div *ngFor="let unephoto of projetActuel.photo">
+            <slide><img src={{unephoto}} alt="slide" style="display: block;" width="100%"></slide>
+        </div>
+    </carousel>
+    <p class="mt-2">{{projetActuel.resume}}</p>
+    <p>Visitez la section "Mes Projets" pour en savoir plus!</p>
     </div>
   </div>
 </div>
