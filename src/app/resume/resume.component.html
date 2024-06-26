@@ -1,1 +1,183 @@
-<p>resume works!</p>
+<div class="container text-center">
+    <button (click)="DownloadFile()" class="btn btn-primary mb-5 shadow border custom-btn">Télécharger mon CV</button>
+
+    <div class="pb-2">
+         <accordion [isAnimated]="true" class="shadow">
+        <accordion-group heading="Diplômes">
+            <div style="text-align: left;">
+                   <!--M2-->
+            <h2 class="mb-0">Master 2 ingénierie informatique</h2>
+            <h3 class="text-primary">Université de la Réunion</h3>
+            <ul>
+                <li>Complexité algorithmique et structures de données</li>
+                <li>développement d'applications</li>
+                <li>réseaux et télécommunications</li>
+                <li>big data et IA</li>
+            </ul>
+               <!--BTS-->
+            <h2 class="mb-0">Bts Services Informatiques aux Organisations</h2>
+            <h3 class="text-primary">Lycée Nelson Mandela</h3>
+            <ul>
+                <li>Développement d'un site web pour la gestion des stages (JavaEE)</li>
+                <li>Développement d'un module de gestion des employés (PHP)</li>
+            </ul> 
+            <h2 class="mb-0">Mention Complémentaire Aéronautique option Avions à turbines (B1.1)</h2>
+            <h3 class="text-primary">Lycée Stella</h3>
+            <ul>
+                <li>Atelier Bigata (3 mois)</li>
+            </ul>
+            <!--BAC PRO-->
+            <h2 class="mb-0">Bac professionnel aéronautique option systèmes</h2>
+            <h3 class="text-primary">Lycée Stella</h3>
+            <ul>
+                <li>Airbus Toulouse (1 mois)</li>
+                <li>Base aérienne 721 Rochefort (1 mois) </li>
+                <li>Air Austral (1 mois)</li>
+            </ul>
+            </div>
+        </accordion-group>
+        <accordion-group heading="Expériences">
+            <div style="text-align: left;">
+                <h2 class="mb-0">Stagiaire analyste développeur</h2>
+                <h3 class="text-primary">SOGEST</h3>
+                <p>02/2023 – 06/2023</p>
+                <ul>
+                    <li>Conception et développement d'API pour un progiciel de gestion</li>
+                    <li>Analyse des besoins du client</li>
+                    <li>Développement d'une interface d'intégration de documents commerciaux et comptables pour le progiciel de gestion Sage 100</li>
+                    <li>Gestion de projet séquentielle</li>
+                </ul>
+                <p><strong>Technologies utilisées :</strong> .NET, Sage objets métiers, AutoIT, SQL Server</p>
+            </div>
+            <hr>
+            <div style="text-align: left;">
+                <h2 class="mb-0">Développeur web</h2>
+                <h3 class="text-primary">Flaxib</h3>
+                <p>09/2022 – 12/2022</p>
+                <ul>
+                    <li>Application web de cartographie pour l'analyse du trafic routier</li>
+                    <li>Mise en place et configuration d'un serveur QGIS</li>
+                    <li>Développement du front-end</li>
+                </ul>
+                <p><strong>Technologies utilisées :</strong> Javascript, Python, Leaflet, QGIS, Docker</p>
+            </div>
+            <hr>
+            <div style="text-align: left;">
+                <h2 class="mb-0">Développeur d'application Java</h2>
+                <h3 class="text-primary">Parc national de la Réunion</h3>
+                <p>09/2021 – 06/2022</p>
+                <ul>
+                    <li>Application de signalement de plantes invasives</li>
+                    <li>Conception et développement de l'application mobile pour la collecte de données sur le terrain et l'application de bureau pour la récupération, la visualisation et la manipulation de ces données</li>
+                    <li>Présentation et démonstration de l'application devant un public</li>
+                </ul>
+                <p><strong>Technologies utilisées :</strong> Java, Android API, Java Swing, Maven, OpenStreetMap API, SQLite</p>
+            </div>
+        </accordion-group>
+        
+        <accordion-group heading="Compétences Techniques">
+            <div style="text-align: left;"> 
+                <div class="col">
+                    <h3>Langage de programmation</h3>
+                    <ul>
+                        <li>
+                            <img src="path/to/java-logo.png" alt="Java" style="height: 20px; width: 20px;">
+                            Java
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="path/to/csharp-logo.png" alt="C#" style="height: 20px; width: 20px;">
+                            C#
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="path/to/javascript-logo.png" alt="JavaScript" style="height: 20px; width: 20px;">
+                            JavaScript
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="path/to/python-logo.png" alt="Python" style="height: 20px; width: 20px;">
+                            Python
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="path/to/php-logo.png" alt="PHP" style="height: 20px; width: 20px;">
+                            PHP
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Concept et architecture</h3>
+                    <ul>
+                        <li>Orienté Objet</li>
+                        <li>MVC</li>
+                        <li>API Rest</li>
+                        <li>Microservices</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Base de données</h3>
+                    <ul>
+                        <li>Requêtes SQL</li>
+                        <li>PostgreSQL</li>
+                        <li>Modélisation MCD/UML</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Framework</h3>
+                    <ul>
+                        <li>Spring Boot</li>
+                        <li>ReactJs</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>CI/CD</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>Linux</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>IDE</h3>
+                    <ul>
+                        <li>IntelliJ IDEA</li>
+                        <li>Eclipse</li>
+                        <li>Visual Studio</li>
+                        <li>Android Studio</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+        </accordion-group>
+        
+        <accordion-group heading="Veille Technologique">
+            <div style="text-align: left;">
+                <h2 class="mb-0">MOOC suivi</h2>
+                <p>2023 – 2024</p>
+                <ul>
+                    <li>Spring Boot</li>
+                    <li>Java EE</li>
+                    <li>Agile Scrum</li>
+                    <li>Angular</li>
+                    <li>Git</li>
+                    <li>Linux</li>
+                    <li>Principes TDD et SOLID</li>
+                </ul>
+            </div>
+        </accordion-group>
+        
+    </accordion>
+    </div>
+</div>
