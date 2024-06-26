@@ -13,10 +13,21 @@ export class PortfolioComponent implements OnInit{
   
   lesProjets = {} as Projet[];
 
+  isCollapsed: boolean = true;
+  java: boolean = false;
+
   constructor(private titleService: Title, private projectService : ProjectsService) {
     this.titleService.setTitle("Etienne Baillif - PortFolio");
   }
   ngOnInit(): void {
     this.lesProjets = this.projectService.GetProjects();
+  }
+
+  Filter(){
+    let filterTags: Tag[] = [];
+    if(this.java){
+      filterTags.push(Tag.JAVA);
+    }
+    this.lesProjets = this.projectService.GetProjectByFilter(filterTags);
   }
 }
