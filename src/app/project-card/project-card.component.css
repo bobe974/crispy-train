@@ -6,6 +6,8 @@
     line-height: 30px;
     border-radius: 25px;
     background-color: blue;
-    color: white;
-
+    color: rgba(244, 241, 241, 0.874);
+    max-width: 100px; /* Ajustez cette valeur selon vos besoins */
+    white-space: nowrap; /* Empêche le texte de s'étendre sur plusieurs lignes */
+     
 }

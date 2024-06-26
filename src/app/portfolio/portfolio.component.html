@@ -1,14 +1,10 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4" style="max-width: 380px;">
-            <app-project-card [projet]="unprojet"></app-project-card>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4" style="max-width: 380px;">
-            <app-project-card [projet]="unprojet"></app-project-card>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4" style="max-width: 380px;">
-            <app-project-card [projet]="unprojet"></app-project-card>
-        </div>
+        <div *ngFor="let unprojet of lesProjets" class="col-lg-4 col-md-6 mb-4" style="max-width: 380px;">
+            <div >
+                <app-project-card [projet]="unprojet"></app-project-card>
+            </div>
+        </div>  
     </div>
 </div>
