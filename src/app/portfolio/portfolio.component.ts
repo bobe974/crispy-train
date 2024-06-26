@@ -18,6 +18,8 @@ export class PortfolioComponent implements OnInit {
   //language
   java: boolean = false;
   springBoot: boolean = false;
+  Csharp: boolean = false;
+  react: boolean = false;
 
   constructor(
     private titleService: Title,
@@ -37,6 +39,12 @@ export class PortfolioComponent implements OnInit {
     if (this.springBoot) {
       filterTags.push(Tag.SPRING);
     }
+    if (this.Csharp) {
+      filterTags.push(Tag.CSHARP);
+    }
+    if (this.react) {
+      filterTags.push(Tag.REACT);
+    }
 
     //etat du filtre
     if (filterTags.length > 0) {
@@ -50,6 +58,8 @@ export class PortfolioComponent implements OnInit {
   ResetFilter() {
     this.java = false;
     this.springBoot = false;
+    this.Csharp = false;
+    this.react = false;
     this.filtering = false;
     this.lesProjets = this.projectService.GetProjects();
   }
