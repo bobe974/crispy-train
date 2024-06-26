@@ -1,12 +1,10 @@
 <div class="container">
   <div class="mb-2">
     <div>
-      <button
-        class="btn btn-outline-primary mb-2 mr-2"
-        (click)="isCollapsed = !isCollapsed"
-      >
+      <button class="btn btn-outline-primary mb-2 me-2"(click)="isCollapsed = !isCollapsed">
         Filtre
       </button>
+      <button class="btn btn-outline-secondary mb-2" (click)="ResetFilter()" [hidden]="!filtering">Reset</button>
     </div>
     <div [collapse]="isCollapsed" [isAnimated]="true">
       <div class="border mb-2 shadow-sm" style="width: 250px">
@@ -19,7 +17,7 @@
                   <input
                     type="checkbox"
                     class="form-check-input position-static me-2"
-                    [(ngModel)] = "java"
+                    [(ngModel)]="java"
                     (change)="Filter()"
                     name="java"
                   />
@@ -29,6 +27,18 @@
             </div>
             <div class="col">
               <small><b>Frameworks:</b></small>
+              <div class="form-group">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input position-static me-2"
+                    [(ngModel)]="springBoot"
+                    (change)="Filter()"
+                    name="springBoot"
+                  />
+                  <label class="form-check small">Spring</label>
+                </div>
+              </div>
             </div>
           </div>
         </form>
