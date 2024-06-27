@@ -1,4 +1,6 @@
-import { Tag } from "./tag";
+import { Tag } from "./Tag";
+
+
 export interface Projet{
     id:number;
     nom:string;
