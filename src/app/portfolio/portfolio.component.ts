@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Projet } from '../modele/Projet';
 import { Tag } from '../modele/Tag';
 import { ProjectsService } from '../_services/projects.service';
+import { ApiService } from '../_services/api.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,7 +12,8 @@ import { ProjectsService } from '../_services/projects.service';
   styleUrls: ['./portfolio.component.css'],
 })
 export class PortfolioComponent implements OnInit {
-  lesProjets = {} as Projet[];
+  lesProjets: Projet[] = [];
+
 
   isCollapsed: boolean = true;
   filtering: boolean = false;
@@ -23,14 +26,24 @@ export class PortfolioComponent implements OnInit {
 
   constructor(
     private titleService: Title,
+    //private apiService: ApiService,
     private projectService: ProjectsService
   ) {
     this.titleService.setTitle('Etienne Baillif - PortFolio');
   }
   ngOnInit(): void {
     this.lesProjets = this.projectService.GetProjects();
+    // this.apiService.getAllProjets().subscribe(
+    //   (projets: Projet[]) => {
+    //     console.log('Projets récupérés depuis l\'API :', projets);
+    //     // Vous pouvez faire d'autres opérations avec les projets ici
+    //     this.lesProjets.push(...projets);
+    //   },
+    //   (error) => {
+    //     console.error('Erreur lors de la récupération des projets :', error);
+    //   }
+    // );
   }
-
   Filter() {
     let filterTags: Tag[] = [];
     if (this.java) {
@@ -52,7 +65,8 @@ export class PortfolioComponent implements OnInit {
     } else {
       this.filtering = false;
     }
-    this.lesProjets = this.projectService.GetProjectByFilter(filterTags);
+    //this.lesProjets = this.projectService.GetProjectByFilter(filterTags);
+    
   }
 
   ResetFilter() {
@@ -61,6 +75,6 @@ export class PortfolioComponent implements OnInit {
     this.Csharp = false;
     this.react = false;
     this.filtering = false;
-    this.lesProjets = this.projectService.GetProjects();
+    //this.lesProjets = this.projectService.GetProjects();
   }
 }

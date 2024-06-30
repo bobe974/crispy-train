@@ -17,6 +17,8 @@ import {CarouselModule} from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     CarouselModule.forRoot(),
     CollapseModule.forRoot(),
     FormsModule,
-    AccordionModule.forRoot()
+    AccordionModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
